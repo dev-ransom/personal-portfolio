@@ -37,22 +37,40 @@ ul{
     background-color: var(--bg-black-900);
     min-height: 100vh;
     display: block;
-    position: fixed;
-    left: 270px;
     padding: 0 30px;
-    right: 0;
-    top: 0;
     opacity: 1;
-    z-index: 0;
+   
 }
 
-
+.main-content{
+    padding-left: 270px;
+}
+.hidden{
+    display: none !important;
+}
 .container{
     max-width: 1250px;
     width: 100%;
     margin: auto;
 }
 
+.section .container{
+    padding-top: 60px;
+    padding-bottom: 70px;
+    text-transform: capitalize;
+}
+
+.section-title{
+    max-width: 100%;
+    flex: 0 0 100%;
+}
+
+.section-title h2{
+    font-size: 40px;
+    color: var(--text-black-900);
+    font-weight: 700;
+    position: relative;
+}
 .row{
     display: flex;
     flex-wrap: wrap;
@@ -228,6 +246,7 @@ ul{
     max-width: 40%;
     text-align: center;
     position: relative;
+   
 }
 
 .home .home-img::after{
@@ -253,6 +272,8 @@ ul{
 
 .home .home-img img{
     height: 400px;
+    margin: auto;
+    border-radius: 5px;
 }
 
 
@@ -284,3 +305,5 @@ h3.my-profession  {
     margin-bottom: 70px;
     color: var(--text-black-700);
 }
+
+/*  */
