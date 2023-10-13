@@ -529,9 +529,50 @@ h3.my-profession  {
     text-transform: capitalize;
 
 }
+
 .about .about-content .timeline .timeline-text{
     font-size: 16px;
     line-height: 25px;
     color: var(--text-black-700);
     text-align: justify;
 }
+
+/* services
+ */
+
+ .services .service-item {
+    margin-bottom: 30px;
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
+ }
+
+ .services .service-item .service-item-inner{
+    border: 1px solid var(--text-black-50);
+    border-radius: 10px;
+    background-color: var(--bg-black-100);
+    padding: 30px 15px;
+    text-align: center;
+    transition: all 0.5 ease;
+    cursor: pointer;
+ }
+
+ .services .service-item .service-item-inner:hover{
+    box-shadow: 0 0  24px rgba(46, 48, 77, 0.15);
+ }
+
+ .services .service-item .service-item-inner .icon{
+    height: 60px;
+    width: 60px;
+    margin: 0 auto 30px;
+    border-radius: 50%;
+    display: block;
+    text-align: center;
+ }
+
+ .services .service-item .service-item-inner .icon .fa{
+    font-size: 40px;
+    line-height: 60px;
+    color: var(--skin-color);
+ }
+
+ .services .service-item .service-item-inner
