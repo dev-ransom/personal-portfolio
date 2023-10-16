@@ -791,10 +791,11 @@ modal */
 .modal-container{
     position: fixed;
     top: 0;
-    min-height: 100vh;
+    min-height: 100%;
     width: 100%;
     background: rgba(0, 0, 0, 0.8);
-    
+    left: 270px;
+    display: none;
 }
 
 .modal-container .show{
@@ -910,12 +911,15 @@ responsive */
     .modal-container .modal-content .row{
     flex-direction: column;
 }
+.modal-container{
+    left: 0;
+}
 
 .modal-container .modal-content{
-    max-width: 350px;
+    max-width: 500px;
 }
 .modal-container .modal-content .modal-description .btn-container{
-    gap: 10px;
+    gap: 20px;
     margin-top: 20px;
 }
 
@@ -924,7 +928,8 @@ responsive */
 }
 
 .list-container{
-    width: 200px;
+    width: 300px;
+    
 }
 
 }
