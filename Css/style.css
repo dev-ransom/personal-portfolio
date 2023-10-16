@@ -910,6 +910,23 @@ responsive */
     .modal-container .modal-content .row{
     flex-direction: column;
 }
+
+.modal-container .modal-content{
+    max-width: 350px;
+}
+.modal-container .modal-content .modal-description .btn-container{
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.modal-container .modal-content .modal-description .btn-container .btn{
+    padding: 10px 20px;
+}
+
+.list-container{
+    width: 200px;
+}
+
 }
 
 @media screen and (max-width: 767px){
