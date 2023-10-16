@@ -31,7 +31,7 @@
         <!-- main-content starts -->
         <section class="main-content">
             <!-- home section starts -->
-            <section class="home section hidden" id="home">
+            <section class="home section " id="home">
                 <article class="container">
                     <article class="row">
                         <article class="home-content padd-15">
@@ -48,7 +48,7 @@
             </section>
             <!-- home section ends -->
             <!-- about section ends -->
-            <section class="about section hidden " id="about">
+            <section class="about section  " id="about">
                 <article class="container">
                     <article class="row">
                         <article class="section-title padd-15">
@@ -217,7 +217,7 @@
             </section>
             <!-- about section ends -->
             <!-- service section starts -->
-            <section class="services section hidden" id="services">
+            <section class="services section " id="services">
                 <article class="container">
                     <article class="row">
                         <article class="section-title padd-15">
@@ -261,7 +261,7 @@
                                 <article class="icon">
                                     <i class="fa fa-search"></i>
                                 </article>
-                                <h3>Search Engine Optimization</h3>
+                                <h3>Search Engine n</h3>
                                 <p>I've developed dynamic websites using HTML, CSS, and JavaScript, creating responsive and user-friendly designs.My experience includes working with various web frameworks and libraries to enhance functionality and user interactivity.
 </p>
                             </article>
@@ -292,7 +292,7 @@
             </section>
             <!-- service section end -->
              <!-- portfolio section start -->
-            <section class="portfolio section hidden" id="portfolio">
+            <section class="portfolio section " id="portfolio">
                 <article class="container">
                     <article class="row">
                         <article class="section-title padd-15">
@@ -304,75 +304,53 @@
                             <h2>my latest works :</h2>
                         </article>
                     </article>
-                    <article class="row">
+                    <article class="row" id="portfolioCard">    
                         <!-- portfolio item starts-->
-                        <article class="portfolio-item padd-15">
-                            <article class="portfolio-inner-item shadow-dark">
-                                <article class="portfolio-img">
-                                    <img src="images/weather-app.png" alt="">
-                                </article>
-                                <article class="portfolio-btn">
-                                    <button class="view-btn" id="1">view project</button>
-                                </article>
-                            </article>
-                        </article>
-                        <article class="portfolio-item padd-15">
-                            <article class="portfolio-inner-item shadow-dark">
-                                <article class="portfolio-img">
-                                    <img src="images/grocery-app.png" alt="">
-                                </article>
-                                <article class="portfolio-btn">
-                                    <button class="view-btn" id="2">view project</button>
-                                </article>
-                            </article>
-                        </article>
-                        <article class="portfolio-item padd-15">
-                            <article class="portfolio-inner-item shadow-dark">
-                                <article class="portfolio-img">
-                                    <img src="images/random-quote.png" alt="">
-                                </article>
-                                <article class="portfolio-btn">
-                                    <button class="view-btn" id="3">view project</button>
-                                </article>
-                            </article>
-                        </article>
-                        <article class="portfolio-item padd-15">
-                            <article class="portfolio-inner-item shadow-dark">
-                                <article class="portfolio-img">
-                                    <img src="images/sign-up.png" alt="">
-                                </article>
-                                <article class="portfolio-btn">
-                                    <button class="view-btn" id="4">view project</button>
-                                </article>
-                            </article>
-                        </article>
-                        <article class="portfolio-item padd-15">
-                            <article class="portfolio-inner-item shadow-dark">
-                                <article class="portfolio-img">
-                                    <img src="images/lurika-clone.png" alt="">
-                                </article>
-                                <article class="portfolio-btn">
-                                    <button class="view-btn" id="5">view project</button>
-                                </article>
-                            </article>
-                        </article>
-                        <article class="portfolio-item padd-15">
-                            <article class="portfolio-inner-item shadow-dark">
-                                <article class="portfolio-img">
-                                    <img src="images/Dad-jokes.png" alt="">
-                                </article>
-                                <article class="portfolio-btn">
-                                    <button class="view-btn" id="6">view project</button>
-                                </article>
-                            </article>
-                        </article>
+                        
                         <!-- portfolio item ends-->
                     </article>
                 </article>
+                
             </section>
-             <!-- portfolio section end -->
+            <!-- portfolio section end -->
+            <!-- modal container  pop up starts -->
+                <div class="modal-container padd-15 ">
+                    <div class="modal-content padd-15 shadow-dark">
+                        <article class="modal-header padd-15    ">
+                            <h3>Grocery Bud</h3>
+                            <i class="fa fa-close"></i>
+                        </article>
+                        <ul class="list-container padd-15">
+                            <li class="list-item">html</li>
+                            <li class="list-item">css</li>
+                            <li class="list-item">JavaScript</li>
+                            <li class="list-item">Api</li>
+                        </ul>
+                        <!-- flex modal -->
+                        <div class="row">
+                            <div class="modal-img padd-15">
+
+                                <img  src="images/grocery-app.png">
+                            </div>
+                            <div class="modal-description">
+                                <p>A simple grocery app that enables users to browse, select, and purchase groceries online. It offers a convenient way to create shopping lists, order items, schedule deliveries, and manage household essentials with ease</p>
+                                <div class="btn-container padd-15">
+                                    <button class="live-demo btn">
+                                        <a href="https://jade-fox-27c55e.netlify.app/" target="_blank">live demo <i class="fa fa-eye"></i></a>
+                                    </button>
+                                    <button class="source-code btn">
+                                        <a href="https://github.com/dev-ransom/color-flipper" target="_blank">source code <i class="fab fa-github"></i></a>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                        
+                </div>
+                <!-- modal container  pop up ends-->
+             
              <!-- contact section starts -->
-             <section class="contact section">
+             <section class="contact section ">
                 <article class="container">
                         <article class="row">
                         <article class="section-title padd-15">
@@ -400,14 +378,52 @@
                         </article>
                         <article class="contact-info-item padd-15">
                             <article class="icon"><i class="fa fa-globe-europe"></i></article>
-                            <h4>Feel free to reach out to us.</h4>
-                            <p>+234 9032600229</p>
+                            <h4>website</h4>
+                            <p>www.domain.com</p>
                         </article>
                         <!-- contact info item start-->
                     </article>
                     <h3 class="contact-title padd-15">SEND ME AN EMAIL</h3>
                     <h4 class="contact-sub-title padd-15">I AM PROMPT IN RESPONDING TO MESSAGES</h4>
-                    <!-- =============   =============== -->
+                    <!-- ============= contact form  =============== -->
+                    <article class="row">
+                        <article class="contact-form padd-15">
+                            <article class="row">
+                                <article class="form-item col-6 padd-15">
+                                    <article class="form-group">
+                                        <input type="text" class="form-control" placeholder="Name" id="Name">
+                                    </article>
+                                </article>
+                                <article class="form-item col-6 padd-15">
+                                    <article class="form-group">
+                                        <input type="email" class="form-control" placeholder="Email" id="Email">
+                                    </article>
+                                </article>
+                            </article>
+                            <article class="row">
+                                <article class="form-item col-12 padd-15">
+                                    <article class="form-group">
+                                        <input type="text" class="form-control" placeholder="Subject" id="Name">
+                                    </article>
+                                </article>
+                            </article>
+                            <article class="row">
+                                <article class="form-item col-12 padd-15">
+                                    <article class="form-group">
+                                        <textarea name="textarea" class="form-control"  placeholder="Message"></textarea>
+                                    </article>
+                                </article>
+                            </article>
+                            <article class="row">
+                                <article class="form-item col-12 padd-15">
+                                    <article class="form-group">
+                                        <button class="submit btn">Send Message</button>
+                                    </article>
+                                </article>
+                            </article>
+                            
+                        </article>
+                    </article>
                 </article>
              </section>
              <!-- contact section end -->
