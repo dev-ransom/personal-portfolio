@@ -68,7 +68,7 @@ for(let i  = 0; i < projects.length; i++){
     const heading3 = document.createElement('h3');
     const paragragh = document.createElement('p');
     const listContainer = document.createElement('ul');
-    const btn = document.createElement('button');
+    const btns = document.createElement('button');
     const project = projects[i];
     portfolioCard.appendChild(article);
     article.appendChild(child);
@@ -76,18 +76,16 @@ for(let i  = 0; i < projects.length; i++){
     child.appendChild(grandChild1);
     child.appendChild(grandChild2)
     grandChild1.appendChild(imageElement);
-    grandChild2.appendChild(btn);
+    grandChild2.appendChild(btns);
     //  add textcontent
-    btn.textContent = 'view project';
+    btns.textContent = 'view project';
     // Add classes to the elements
     article.classList.add('portfolio-item', 'padd-15');
     child.classList.add('portfolio-inner-item', 'shadow-dark');
     grandChild1.classList.add('portfolio-img');
     grandChild2.classList.add('portfolio-btn');
-    btn.classList.add('view-btn');
-    btn.addEventListener('click', ()=>{
-        
-    })
+    btns.classList.add('view-btn');
+    
 }
 
 
