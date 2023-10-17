@@ -97,15 +97,24 @@ function createProjectCard(project){
             const modalContent = document.createElement('div');
             const modalHeader = document.createElement('article');
             const heading3 = document.createElement('h3');
-            const paragragh = document.createElement('p');
             const listContainer = document.createElement('ul');
             const icon = document.createElement('i');
+            // start here
+            const row = document.createElement('div');
+            const modalImg = document.createElement('div');
+            const img = document.createElement('img');
+            const modalDescription = document.createElement('div');
+            const paragragh = document.createElement('p');
+             const btnContainer = document.createElement('div');
+            //  appending children
             modalContainer.appendChild(modalContent);
             modalContent.appendChild(modalHeader);
             heading3.innerHTML = project.title;
-            modalHeader.appendChild(heading3)
+            modalHeader.appendChild(heading3);
             modalHeader.appendChild(icon);
             modalContent.appendChild(listContainer);
+            // start here
+            modalContent.appendChild(row);
             for(let i = 0; i < project.technologies.length; i++){
                 const listItem = document.createElement('li');
                 const proj = project.technologies[i];
@@ -117,6 +126,7 @@ function createProjectCard(project){
             modalHeader.classList.add('modal-header', 'padd-15');
             icon.classList.add('fa', 'fa-close');
             listContainer.classList.add('list-container', 'padd-15');
+            row.classList.add('row')
             console.log(modalContainer);
         })
     })
