@@ -817,6 +817,8 @@ modal */
     max-width: 1250px;
     border-radius: 50px;
     background-color: var(--bg-black-100);
+    padding: 20px;
+    margin-top: 30px;
 }
 
 .modal-header{
@@ -856,7 +858,7 @@ modal */
 }
 
 .modal-container .modal-content .modal-img img{
-    border-radius: 40px;
+    border-radius: 10px;
     width: 100%;
     
 }
