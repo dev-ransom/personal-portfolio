@@ -132,6 +132,14 @@ function createProjectCard(project){
             btnContainer.appendChild(sourceButton);
             liveButton.appendChild(liveDemoLink);
             sourceButton.appendChild(SourceCodeLink);
+            liveDemoLink.innerHTML = 'live demo';
+            liveDemoLink.href = project['live demo'];
+            liveDemoLink.target = '_blank';
+            SourceCodeLink.innerHTML = 'source code';
+            SourceCodeLink.href = project['source code'];
+            SourceCodeLink.target = '_blank';
+            liveDemoLink.appendChild(icon);
+            SourceCodeLink.appendChild(icon);
             for(let i = 0; i < project.technologies.length; i++){
                 const listItem = document.createElement('li');
                 const proj = project.technologies[i];
