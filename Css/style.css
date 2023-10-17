@@ -408,6 +408,7 @@ h3.my-profession  {
 
 .about .about-content .buttons{
      margin-top: 30px;
+     display: flex;
 }
 
 .about .about-content .buttons .btn{
@@ -846,6 +847,15 @@ modal */
 .fa-close:hover{
     color: var(--skin-color);
 }
+
+.fa-github{
+    margin-left: 10px;
+}
+
+.fa-eye{
+    margin-left: 10px;
+}
+
 .modal-container .modal-content .row{
     flex-wrap: nowrap;
     

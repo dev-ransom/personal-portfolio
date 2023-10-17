@@ -101,6 +101,8 @@ function createProjectCard(project){
             const heading3 = document.createElement('h3');
             const listContainer = document.createElement('ul');
             const icon = document.createElement('i');
+            const viewIcon = document.createElement('i');
+            const sourceIcon = document.createElement('i');
             // start here
             const row = document.createElement('div');
             const modalImg = document.createElement('div');
@@ -138,8 +140,8 @@ function createProjectCard(project){
             SourceCodeLink.innerHTML = 'source code';
             SourceCodeLink.href = project['source code'];
             SourceCodeLink.target = '_blank';
-            liveDemoLink.appendChild(icon);
-            SourceCodeLink.appendChild(icon);
+            liveDemoLink.appendChild(viewIcon);
+            SourceCodeLink.appendChild(sourceIcon);
             for(let i = 0; i < project.technologies.length; i++){
                 const listItem = document.createElement('li');
                 const proj = project.technologies[i];
@@ -157,6 +159,8 @@ function createProjectCard(project){
             btnContainer.classList.add('btn-container', 'padd-15');
             liveButton.classList.add('live-demo', 'btn');
             sourceButton.classList.add('source-code', 'btn');
+            viewIcon.classList.add('fa', 'fa-eye');
+            sourceIcon.classList.add('fab', 'fa-github');
             console.log(modalContainer);
         }
 
