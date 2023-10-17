@@ -566,9 +566,9 @@ h3.my-profession  {
     margin-bottom: 30px;
     flex: 0 0 33.33%;
     max-width: 33.33%;
- }
+}
 
- .services .service-item .service-item-inner{
+.services .service-item .service-item-inner{
     border: 1px solid var(--text-black-50);
     border-radius: 10px;
     background-color: var(--bg-black-100);
@@ -811,15 +811,12 @@ modal */
     display: none;
 }
 
-.modal-container .show{
-  display: block;
-}
+
 
 .modal-container .modal-content{
     max-width: 1250px;
     border-radius: 50px;
     background-color: var(--bg-black-100);
-    
 }
 
 .modal-header{
@@ -841,8 +838,12 @@ modal */
     color: var(--text-black-100);
     font-size: 30px;
     cursor: pointer;
+    transition: all 0.3s ease;
 }
 
+.fa-close:hover{
+    color: var(--skin-color);
+}
 .modal-container .modal-content .row{
     flex-wrap: nowrap;
     

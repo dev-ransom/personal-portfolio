@@ -1,6 +1,6 @@
 const portfolioCard = document.querySelector('#portfolioCard');
 const modalContainer = document.querySelector('.modal-container');
-const projects = [
+const projectData = [
     {
         id: '0',
         title: 'Grocery app',
@@ -59,44 +59,65 @@ const projects = [
 
 
 
-for(let i  = 0; i < projects.length; i++){
+function createProjectCard(project){
     const article = document.createElement('article');
     const child = document.createElement('article');
     const grandChild1 = document.createElement('article');
     const grandChild2 = document.createElement('article');
     const imageElement = document.createElement('img');
-    const heading3 = document.createElement('h3');
-    const paragragh = document.createElement('p');
-    const listContainer = document.createElement('ul');
-    const btns = document.createElement('button');
-    const project = projects[i];
+    const btn = document.createElement('button');
     portfolioCard.appendChild(article);
     article.appendChild(child);
     imageElement.src = project.image;
     child.appendChild(grandChild1);
     child.appendChild(grandChild2)
     grandChild1.appendChild(imageElement);
-    grandChild2.appendChild(btns);
+    grandChild2.appendChild(btn);
     //  add textcontent
-    btns.textContent = 'view project';
+    btn.textContent = 'view project';
     // Add classes to the elements
     article.classList.add('portfolio-item', 'padd-15');
     child.classList.add('portfolio-inner-item', 'shadow-dark');
     grandChild1.classList.add('portfolio-img');
     grandChild2.classList.add('portfolio-btn');
-    btns.classList.add('view-btn');
-    
-}
+    btn.classList.add('view-btn', 'pop');
+    btn.setAttribute('data-project-id', project.id);
 
+    }
 
+    projectData.forEach((project)=>{
+        createProjectCard(project)
+    });
 
-
-
-
-
-
-
-
-
-
+    const popBtn = document.querySelectorAll('.pop');
+    Array.from(popBtn).forEach((btn)=>{
+        btn.addEventListener('click', (event)=>{
+            const projectId = event.target.getAttribute('data-project-id');
+            const project = projectData.find((proj) => proj.id === projectId);
+            const modalContent = document.createElement('div');
+            const modalHeader = document.createElement('article');
+            const heading3 = document.createElement('h3');
+            const paragragh = document.createElement('p');
+            const listContainer = document.createElement('ul');
+            const icon = document.createElement('i');
+            modalContainer.appendChild(modalContent);
+            modalContent.appendChild(modalHeader);
+            heading3.innerHTML = project.title;
+            modalHeader.appendChild(heading3)
+            modalHeader.appendChild(icon);
+            modalContent.appendChild(listContainer);
+            for(let i = 0; i < project.technologies.length; i++){
+                const listItem = document.createElement('li');
+                const proj = project.technologies[i];
+                listContainer.appendChild(listItem);
+                listItem.innerHTML = proj;
+            }
+            // add classlist
+            modalContent.classList.add('modal-content', 'padd-15', 'shadow-dark');
+            modalHeader.classList.add('modal-header', 'padd-15');
+            icon.classList.add('fa', 'fa-close');
+            listContainer.classList.add('list-container', 'padd-15');
+            console.log(modalContainer);
+        })
+    })
 
