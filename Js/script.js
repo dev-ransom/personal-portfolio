@@ -1,4 +1,5 @@
 const portfolioCard = document.querySelector('#portfolioCard');
+const modalPopUp = document.querySelector('.modal-pop-up');
 const modalContainer = document.querySelector('.modal-container');
 const projectData = [
     {
@@ -95,7 +96,8 @@ function createProjectCard(project){
             const projectId = event.target.getAttribute('data-project-id');
             const project = projectData.find((proj) => proj.id === projectId);
             // clear modalcontainer to avoid repition of modal content
-             modalContainer.innerHTML = '';
+             modalPopUp.innerHTML = '';
+             const modalContainer = document.createElement('div');
             const modalContent = document.createElement('div');
             const modalHeader = document.createElement('article');
             const heading3 = document.createElement('h3');
@@ -115,6 +117,7 @@ function createProjectCard(project){
             const liveDemoLink =  document.createElement('a');
             const SourceCodeLink =  document.createElement('a');
             //  appending children
+            modalPopUp.appendChild(modalContainer);
             modalContainer.appendChild(modalContent);
             modalContent.appendChild(modalHeader);
             heading3.innerHTML = project.title;
@@ -149,6 +152,7 @@ function createProjectCard(project){
                 listItem.innerHTML = proj;
             }
             // add classlist
+            modalContainer.classList.add('modal-container', 'padd-15');
             modalContent.classList.add('modal-content', 'padd-15', 'shadow-dark');
             modalHeader.classList.add('modal-header', 'padd-15');
             icon.classList.add('fa', 'fa-close');
@@ -161,7 +165,10 @@ function createProjectCard(project){
             sourceButton.classList.add('source-code', 'btn');
             viewIcon.classList.add('fa', 'fa-eye');
             sourceIcon.classList.add('fab', 'fa-github');
-            console.log(modalContainer);
+            icon.addEventListener('click', ()=>{
+                
+                modalContainer.style.display = 'none'
+            })
         }
 
    Array.from(popBtn).forEach((btn)=>{

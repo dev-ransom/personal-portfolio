@@ -809,7 +809,7 @@ modal */
     width: 100%;
     background: rgba(0, 0, 0, 0.8);
     left: 270px;
-    display: none;
+    transition: all 0.9s ease;
 }
 
 
@@ -841,7 +841,7 @@ modal */
     color: var(--text-black-100);
     font-size: 30px;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all 0.9s ease;
 }
 
 .fa-close:hover{
