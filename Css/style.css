@@ -5,8 +5,17 @@
     --bg-black-100: #fdf9ff;
     --bg-black-50: #00000032;
     --text-black-900: #302e4d;
-    --text-black-100: #504e70;
+    --text-black-100: #00000093;
     --text-black-700: #00000093;
+}
+
+body.dark{
+   --bg-black-900: #151515;
+    --bg-black-100: #222222;
+    --bg-black-50: #393939;
+    --text-black-900: #ffffff;
+    --text-black-700: #e9e9e9;
+    --text-black-100: #e9e9e9;
 }
 
 body{
@@ -288,7 +297,7 @@ ul{
     height: 80px;
     position: absolute;
     bottom: -40px;
-    right: 20px;
+    right: -3%;
 }
 .home .home-img::before{
     content: '';
@@ -298,7 +307,7 @@ ul{
     height: 80px;
     position: absolute;
     top: -40px;
-    left: 20px;
+    left: -3%;
 }
 
 .home .home-img img{
@@ -328,7 +337,11 @@ h3.my-profession  {
 
  .typing{
     color: var(--skin-color);
-   
+}
+
+/* Change the color of the typing cursor */
+.typed-cursor {
+    color: var(--skin-color); /* Change to the desired color */
 }
 
 .home .home-content p{

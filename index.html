@@ -14,7 +14,6 @@
     <link rel="stylesheet" href="Css/color-4.css" class="alternate-style" title="color-4" disabled>
     <link rel="stylesheet" href="Css/color-5.css" class="alternate-style" title="color-5" disabled>
     <link rel="stylesheet" href="/Css/style-switcher.css">
-
 </head>
 <body>
     <!-- main-container starts  -->
@@ -32,7 +31,7 @@
                 <li><a href="#about"><i class="fa fa-user"></i>About</a></li>
                 <li><a href="#services"><i class="fa fa-briefcase"></i>service</a></li>
                 <li><a href="#portfolio"><i class="fa fa-list"></i>portfolio</a></li>
-                <li><a href="#"><i class="fa fa-comments"></i>contact</a></li>
+                <li><a href="#contactme"><i class="fa fa-comments"></i>contact</a></li>
             </ul>
         </section>
         <!-- aside ends -->
@@ -43,8 +42,8 @@
                 <article class="container">
                     <article class="row">
                         <article class="home-content padd-15">
-                            <h3 class="hello">Hello, I'm <span>Ransom Sunday</span> </h3>
-                            <h3 class="my-profession">I'm a <span class="typing">Frontend developer!</span></h3>
+                            <h3 class="hello">Hello, I'm <span class="code">Ransom Sunday</span> </h3>
+                            <h3 class="my-profession">I'm a <span class="typing"></span></h3>
                             <p>As a front-end  developer, I posses a deep understanding of HTML, CSS, and Js, the core building blocks of the web</p>
                             <a href="#" class="hire-me btn">hire me</a>
                         </article>
@@ -104,7 +103,7 @@
                                     <article class="row">
                                         <article class="buttons padd-15">
                                             <a href="#" class="btn">Download CV</a>
-                                            <a href="#contactme" class="btn hire-me">hire me</a>
+                                            <a href="#" class="btn hire-me">hire me</a>
                                         </article>
                                     </article>
                                 </article>
@@ -324,7 +323,7 @@
             
              
              <!-- contact section starts -->
-             <section class="contact section ">
+             <section class="contact section " id="contactme">
                 <article class="container">
                         <article class="row">
                         <article class="section-title padd-15">
@@ -446,7 +445,7 @@
         <i class="fas fa-cog fa-spin"></i>
     </div>
     <div class="day-night s-icon">
-        <i class="fas fa-moon"></i>
+        <i class="fas "></i>
     </div>
     <h4>theme colors</h4>
     <div class="colors">
@@ -457,10 +456,29 @@
         <span class="color-5" onclick="setActiveStyle('color-5')"></span>
     </div>
  </div>
+
+   
  <!-- style switcher ends -->
  <!-- main js end-->
     <script src="/Js/main.js"></script>
  <!-- main js ends-->
     <script src="Js/script.js"></script>
+    <!-- typed  -->
+  <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+
+  <script>
+
+// // typing animation 
+
+    var typed = new Typed('.typing', {
+        strings: ["Web developer", "Web Designer", "Content creator"],
+        typeSpeed: 150,
+        backSpeed: 150,
+        loop: true,
+    });
+  </script>
+ 
 </body>
+
+     
 </html>
