@@ -58,6 +58,9 @@ ul{
     overflow-x: hidden;
 }
 
+.modal-content{
+    padding-left: 270px;
+}
 
 .section.active{
     z-index: 2;
