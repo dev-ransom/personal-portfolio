@@ -58,13 +58,21 @@ ul{
     overflow-x: hidden;
 }
 
-.modal-content{
-    padding-left: 270px;
+.section.back-section{
+    z-index: 1;
 }
 
 .section.active{
     z-index: 2;
     opacity: 1;
+    animation: slideSection 0.5s ease;
+}
+
+@keyframes slideSection{
+    0%{
+        transform: translateX(100%);
+    }
+
     
 }
 
@@ -926,8 +934,13 @@ responsive */
     left: -270px;
   }
 
- .main-content{
-    padding-left: 0;
+ .aside .nav-toggler{
+    display: flex;
+    left: 30px;
+ }
+
+ .section{
+    left: 0;
  }
 
  .about .about-content .personal-info .info-item p span{
