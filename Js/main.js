@@ -22,7 +22,14 @@ dayNight.addEventListener('click',()=>{
     
     dayNight.querySelector('i').classList.toggle('fa-sun')
     dayNight.querySelector('i').classList.toggle('fa-moon')
-    document.body.classList.add('dark')
+    if(document.body.classList.contains('dark')){
+        document.body.classList.remove('dark')
+    }
+    else{
+
+        document.body.classList.add('dark')
+    }
+    
 })
 
 window.addEventListener('load', ()=>{
@@ -32,6 +39,8 @@ window.addEventListener('load', ()=>{
     else{
         dayNight.querySelector('i').classList.add('fa-moon')
     }
+
+
 })
 
 
@@ -62,6 +71,16 @@ for (let i = 0; i < totalNavList; i++){
   const a =  navList[i].querySelector('a');
 
   a.addEventListener('click', function(){
-    this.classList.add('active')
+    for(let j = 0; j < totalNavList; j++){
+      navList[j].querySelector('a').classList.remove('active')
+    }
+    this.classList.add('active');
+    showSection(this);
   })
+}
+
+function showSection(element){
+    const target = element.getAttribute('href').split('#')[1];
+    const final = document.querySelector('#' + target).classList.add('active')
+    console.log(final);
 }

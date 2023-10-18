@@ -169,8 +169,11 @@ function createProjectCard(project){
                 
                 modalContainer.style.display = 'none'
             })
+            
         }
 
    Array.from(popBtn).forEach((btn)=>{
     btn.addEventListener('click', handlePopButtonClick);
    })
+
+//    form validation section
