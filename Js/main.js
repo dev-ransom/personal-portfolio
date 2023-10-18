@@ -1,6 +1,9 @@
 // toggle for switch
 const styleSwitcherToggle = document.querySelector('.style-switcher-toggle');
+// for all section
 
+const allSection = document.querySelectorAll('.section');
+const totalSection = allSection.length;
 // add eventlistener
 
 styleSwitcherToggle.addEventListener('click', ()=>{
@@ -80,7 +83,11 @@ for (let i = 0; i < totalNavList; i++){
 }
 
 function showSection(element){
+    for(let i = 0; i < totalSection; i++){
+        allSection[i].classList.remove('active');
+    }
     const target = element.getAttribute('href').split('#')[1];
     const final = document.querySelector('#' + target).classList.add('active')
-    console.log(final);
 }
+
+
