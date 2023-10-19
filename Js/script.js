@@ -177,3 +177,11 @@ function createProjectCard(project){
    })
 
 //    form validation section
+
+// select classes
+const contactForm = document.getElementsByTagName('form')[0];
+
+contactForm.addEventListener('submit', function(event){
+    console.log('life');
+    event.preventDefault();
+})
