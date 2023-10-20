@@ -198,12 +198,20 @@ function validateName() {
     if (contactName.value.trim().length === 0) {
         nameError.innerHTML = 'Input required';
         contactName.style.border = '1px solid red';
+        setTimeout(function() {
+            nameError.innerHTML = '';
+            contactName.style.border = '';
+        }, 3000); // Remove the error message and red border after 3 seconds
         return false;
     }
 
     if (!contactName.value.match(nameRegex)) {
-        nameError.innerHTML = 'invalid name';
+        nameError.innerHTML = 'Invalid name';
         contactName.style.border = '1px solid red';
+        setTimeout(function() {
+            nameError.innerHTML = '';
+            contactName.style.border = '';
+        }, 50000); // Remove the error message and red border after 3 seconds
         return false;
     }
 
@@ -211,6 +219,8 @@ function validateName() {
     contactName.style.border = '';
     return true;
 }
+
+// ...
 
 
 email.addEventListener('input', validateEmail);
@@ -220,12 +230,20 @@ function validateEmail() {
     if (email.value.trim().length === 0) {
         emailError.innerHTML = 'Input required';
         email.style.border = '1px solid red';
+        setTimeout(function() {
+            emailError.innerHTML = '';
+            email.style.border = '';
+        }, 100000); // Remove the error message and red border after 3 seconds
         return false;
     }
 
-    if (!email.value.match(emailRegex)) { // Use "!" to negate the condition
+    if (!email.value.match(emailRegex)) {
         emailError.innerHTML = 'Invalid email';
         email.style.border = '1px solid red';
+        setTimeout(function() {
+            emailError.innerHTML = '';
+            email.style.border = '';
+        }, 100000); // Remove the error message and red border after 3 seconds
         return false;
     }
 
@@ -234,22 +252,28 @@ function validateEmail() {
     return true;
 }
 
-  subject.addEventListener('input', validateSubject);
+// ...
 
+
+  subject.addEventListener('input', validateSubject);
 
 function validateSubject() {
     if (subject.value.trim().length === 0) {
         subjectError.innerHTML = 'Input required';
         subject.style.border = '1px solid red';
+        setTimeout(function() {
+            subjectError.innerHTML = '';
+            subject.style.border = '';
+        }, 50000); // Remove the error message and red border after 3 seconds
         return false;
     }
-    
 
     subjectError.innerHTML = '<i class="fa-solid fa-square-check"></i>';
     subject.style.border = '';
-    return false;
+    return true;
 }
 
+// ...
 
 
     message.addEventListener('input', validateMessage);
@@ -266,14 +290,14 @@ function validateSubject() {
         return true;
     }
 
-  const submitBtn = document.querySelector('.submit');
-submitBtn.addEventListener('click', function(e) {
-    if (!validateName() && !validateEmail() && !validateSubject() && !validateMessage()) {
-    // Prevent form submission
-    e.preventDefault();
-}
 
-    
+
+const submitBtn = document.querySelector('.submit');
+submitBtn.addEventListener('click', function (e) {
+    if (!validateName() || !validateEmail() || !validateSubject() || !validateMessage()) {
+        e.preventDefault();
+    }
 });
+
 
        
