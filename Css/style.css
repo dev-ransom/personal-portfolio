@@ -827,6 +827,38 @@ h3.my-profession  {
 
 }
 
+
+/* error message */
+
+
+
+.form-group{
+    position: relative;
+}
+
+.form-group input {
+    border: 1px solid red;
+}
+
+.form-group small{
+    position: absolute;
+    text-align: center;
+    top: 30%;
+    left: 60%;
+    color: red;
+    font-size: 13px;
+}
+
+.form-group small.message-error{
+    top: 70%;
+    left: 70%;
+}
+
+.form-group small i {
+    color: greenyellow;
+    font-size: 20px;
+    margin-left: 20px;
+}
 /* list container */
 .list-container {
  width: 400px;
@@ -985,6 +1017,12 @@ responsive */
     display: block;
     margin-left: 0;
  }
+
+ .form-group small.message-error{
+    top: 40%;
+    left: 50%;
+}
+
 }
 
 @media screen and (max-width: 991px){
@@ -1043,33 +1081,3 @@ responsive */
 }
 
 
-/* error message */
-
-
-
-.form-group{
-    position: relative;
-}
-
-.form-group input {
-    border: 1px solid red;
-}
-
-.form-group small{
-    position: absolute;
-    text-align: center;
-    top: 30%;
-    left: 50%;
-    color: red;
-}
-
-.form-group small.message-error{
-    top: 70%;
-    left: 70%;
-}
-
-.form-group small i {
-    color: greenyellow;
-    font-size: 20px;
-    margin-left: 20px;
-}

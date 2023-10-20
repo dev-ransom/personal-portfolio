@@ -189,7 +189,7 @@ function createProjectCard(project){
     const email = document.querySelector('#Email');
     const emailError = document.querySelector('.email-error');
     const contactName = document.querySelector('#Name');
-    c
+    const message = document.querySelector('#Textarea');
     // name validation 
 contactName.addEventListener('input', validateName);
 const nameRegex = /^[A-Za-z\s\-']+$/;
@@ -234,24 +234,46 @@ function validateEmail() {
     return true;
 }
 
-    subject.addEventListener('input', validateSubject);
-   const subjectRegex =  /^[A-Za-z]*\s{1}[A-Za-z]*$/;
-    function validateSubject(){
-        if(subject.value.trim().length == 0){
-            subjectError.innerHTML = 'input required';
-           subject.style.border = '1px solid red'
-            return false;
-        }
-        if(!subject.value.match(subjectRegex)){
-            subjectError.innerHTML = '';
-            return false;
-        }
+  subject.addEventListener('input', validateSubject);
 
-        subjectError.innerHTML = ' <i class="fa-solid fa-square-check"></i>';
-       
-        subjectError.style.border = ''
+
+function validateSubject() {
+    if (subject.value.trim().length === 0) {
+        subjectError.innerHTML = 'Input required';
+        subject.style.border = '1px solid red';
+        return false;
+    }
+    
+
+    subjectError.innerHTML = '<i class="fa-solid fa-square-check"></i>';
+    subject.style.border = '';
+    return false;
+}
+
+
+
+    message.addEventListener('input', validateMessage);
+
+    function validateMessage(){
+
+        let required = 30;
+        let left = required - message.value.length;
+        if(left > 0){
+            messageError.innerHTML = `${left}  more characters required`
+            return false;
+        }
+        messageError.innerHTML = ' <i class="fa-solid fa-square-check"></i>'
         return true;
     }
 
+  const submitBtn = document.querySelector('.submit');
+submitBtn.addEventListener('click', function(e) {
+    if (!validateName() && !validateEmail() && !validateSubject() && !validateMessage()) {
+    // Prevent form submission
+    e.preventDefault();
+}
 
     
+});
+
+       
