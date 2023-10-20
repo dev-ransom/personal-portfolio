@@ -796,6 +796,7 @@ h3.my-profession  {
 
 .contact .contact-form .form-item {
     margin-bottom: 30px;
+    padding: 10px;
 }
 
 .contact .contact-form .form-item .form-control {
@@ -808,6 +809,7 @@ h3.my-profession  {
     font-size: 16px;
     color: var(--text-black-700);
     transition: all 0.9s ease;
+    
 }
 
 .contact .contact-form .form-item .form-control:focus{
@@ -1038,4 +1040,36 @@ responsive */
     .contact .contact-title{
         font-size: 24px;
     }
+}
+
+
+/* error message */
+
+
+
+.form-group{
+    position: relative;
+}
+
+.form-group input {
+    border: 1px solid red;
+}
+
+.form-group small{
+    position: absolute;
+    text-align: center;
+    top: 30%;
+    left: 50%;
+    color: red;
+}
+
+.form-group small.message-error{
+    top: 70%;
+    left: 70%;
+}
+
+.form-group small i {
+    color: greenyellow;
+    font-size: 20px;
+    margin-left: 20px;
 }

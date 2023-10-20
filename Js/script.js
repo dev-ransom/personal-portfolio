@@ -178,10 +178,80 @@ function createProjectCard(project){
 
 //    form validation section
 
-// select classes
-const contactForm = document.getElementsByTagName('form')[0];
+// select items
+    const contactForm = document.getElementsByTagName('form')[0];
+    
+    const subject = document.querySelector('#Subject');
+    const textarea = document.querySelector('#Textarea');
+    const nameError = document.querySelector('.name-error');
+    const subjectError = document.querySelector('.subject-error');
+    const messageError = document.querySelector('.message-error');
+    const email = document.querySelector('#Email');
+    const emailError = document.querySelector('.email-error');
+    const contactName = document.querySelector('#Name');
+    c
+    // name validation 
+contactName.addEventListener('input', validateName);
+const nameRegex = /^[A-Za-z\s\-']+$/;
 
-contactForm.addEventListener('submit', function(event){
-    console.log('life');
-    event.preventDefault();
-})
+function validateName() {
+    if (contactName.value.trim().length === 0) {
+        nameError.innerHTML = 'Input required';
+        contactName.style.border = '1px solid red';
+        return false;
+    }
+
+    if (!contactName.value.match(nameRegex)) {
+        nameError.innerHTML = 'invalid name';
+        contactName.style.border = '1px solid red';
+        return false;
+    }
+
+    nameError.innerHTML = '<i class="fa-solid fa-square-check"></i>';
+    contactName.style.border = '';
+    return true;
+}
+
+
+email.addEventListener('input', validateEmail);
+const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+
+function validateEmail() {
+    if (email.value.trim().length === 0) {
+        emailError.innerHTML = 'Input required';
+        email.style.border = '1px solid red';
+        return false;
+    }
+
+    if (!email.value.match(emailRegex)) { // Use "!" to negate the condition
+        emailError.innerHTML = 'Invalid email';
+        email.style.border = '1px solid red';
+        return false;
+    }
+
+    emailError.innerHTML = ' <i class="fa-solid fa-square-check"></i>';
+    email.style.border = '';
+    return true;
+}
+
+    subject.addEventListener('input', validateSubject);
+   const subjectRegex =  /^[A-Za-z]*\s{1}[A-Za-z]*$/;
+    function validateSubject(){
+        if(subject.value.trim().length == 0){
+            subjectError.innerHTML = 'input required';
+           subject.style.border = '1px solid red'
+            return false;
+        }
+        if(!subject.value.match(subjectRegex)){
+            subjectError.innerHTML = '';
+            return false;
+        }
+
+        subjectError.innerHTML = ' <i class="fa-solid fa-square-check"></i>';
+       
+        subjectError.style.border = ''
+        return true;
+    }
+
+
+    
