@@ -297,7 +297,10 @@ submitBtn.addEventListener('click', function (e) {
     if (!validateName() || !validateEmail() || !validateSubject() || !validateMessage()) {
         e.preventDefault();
     }
+
+
 });
 
 
        
+

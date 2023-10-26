@@ -135,12 +135,14 @@ const navTogglerBtn = document.querySelector('.nav-toggler'),
     asideSectionShow();
  })
 
- function asideSectionShow(){
+
+function asideSectionShow(){
     aside.classList.toggle('open');
     navTogglerBtn.classList.toggle('open');
     for(let i = 0; i < totalSection; i++){
         allSection[i].classList.toggle('open');
     }
- }
+}
+ 
 
 
