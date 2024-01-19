@@ -56,6 +56,15 @@ const projectData = [
         'source code': 'https://github.com/dev-ransom/Dad_Jokes',
         'live demo': 'https://lustrous-syrniki-32ec80.netlify.app/',
     },
+    {        
+        id: '6',
+        title: 'Reacts Facts',
+        description: "React is designed to provide a powerful and efficient way to build user interfaces for web applications. It forms the foundation for creating interactive and dynamic web experiences..",
+        technologies: ['Html', 'CSS', 'React', 'TailwindCss'],
+        image: 'images/react-app.PNG',
+        'source code': 'https://github.com/dev-ransom/Dad_Jokes',
+        'live demo': 'https://lustrous-syrniki-32ec80.netlify.app/',
+    },
 ]
 
 

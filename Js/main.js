@@ -14,59 +14,28 @@ styleSwitcherToggle.addEventListener('click', ()=>{
 // hide toggle switcher on scroll
 
 window.addEventListener('scroll', ()=>{
-    if(document.querySelector('.style-switcher').classList.contains('open')){
-        document.querySelector('.style-switcher').classList.remove('open')
-    }
+        if(document.querySelector('.style-switcher').classList.contains('open')){
+            document.querySelector('.style-switcher').classList.remove('open')
+        }
 })
-
 // theme light and dark mode
 const dayNight = document.querySelector('.day-night');
-dayNight.addEventListener('click',()=>{
-    
+dayNight.addEventListener('click',()=>{ 
     dayNight.querySelector('i').classList.toggle('fa-sun')
     dayNight.querySelector('i').classList.toggle('fa-moon')
-    if(document.body.classList.contains('dark')){
-        document.body.classList.remove('dark')
-    }
-    else{
-
-        document.body.classList.add('dark')
-    }
-    
+    document.body.classList.contains('dark') ?  document.body.classList.remove('dark') : document.body.classList.add('dark')
 })
-
 window.addEventListener('load', ()=>{
-    if(document.body.classList.contains('dark')){
-        dayNight.querySelector('i').classList.add('fa-sun')
-    }
-    else{
-        dayNight.querySelector('i').classList.add('fa-moon')
-    }
-
-
+    document.body.classList.contains('dark') ? dayNight.querySelector('i').classList.add('fa-sun') : dayNight.querySelector('i').classList.add('fa-moon')
 })
-
-
-
 // theme color
  const alternateStyle = document.querySelectorAll('.alternate-style');
-
-
 function  setActiveStyle(color){
-    alternateStyle.forEach((style)=> {
-        if(color === style.getAttribute('title')){
-            style.removeAttribute('disabled');
-        }
-        else{
-            style.setAttribute('disabled','true')
-            
-        }
+    alternateStyle.forEach((style) => {
+    color === style.getAttribute('title') ? style.removeAttribute('disabled') : style.setAttribute('disabled', 'true')
     })
 }
-
 //----------------  aside bar -------------/*
-
-
 const nav = document.querySelector('.nav'),
 navList = nav.querySelectorAll('li');
 totalNavList = navList.length;
@@ -77,12 +46,8 @@ for (let i = 0; i < totalNavList; i++){
     
     removeBackSection();
     for(let j = 0; j < totalNavList; j++){
-        if(navList[j].querySelector('a').classList.contains('active')){
-            // allSection[j].classList.add('back-section')
-            addBackSection(j);
-        }
-      navList[j].querySelector('a').classList.remove('active')
-      
+        navList[j].querySelector('a').classList.contains('active') ? addBackSection(j) : '';
+        navList[j].querySelector('a').classList.remove('active')
     }
     this.classList.add('active');
     showSection(this);
@@ -114,9 +79,7 @@ function updateNav(element){
     for(let i = 0; i < totalNavList; i++){
         navList[i].querySelector('a').classList.remove('active');
         const target = element.getAttribute('href').split('#')[1];
-        if(target === navList[i].querySelector('a').getAttribute('href').split('#')[1]){
-          navList[i].querySelector('a').classList.add('active');  
-        }
+        target === navList[i].querySelector('a').getAttribute('href').split('#')[1] ? navList[i].querySelector('a').classList.add('active') : '';
     }
        
 }
