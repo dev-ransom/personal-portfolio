@@ -65,6 +65,15 @@ const projectData = [
         'source code': 'https://github.com/dev-ransom/Dad_Jokes',
         'live demo': 'https://lustrous-syrniki-32ec80.netlify.app/',
     },
+    {        
+        id: '7',
+        title: 'Travel List App',
+        description: "The travel list app allows users to add, manage, and track items they need to pack for a trip, providing sorting options and visual indicators for packed items.",
+        technologies: ['Html', 'CSS', 'React', 'TailwindCss'],
+        image: 'images/travelList.png',
+        'source code': 'https://github.com/dev-ransom/React-travel-list',
+        'live demo': 'https://react-travel-list-q31v.vercel.app/',
+    },
 ]
 
 
